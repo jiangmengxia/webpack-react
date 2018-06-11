@@ -14,13 +14,6 @@ const devWebpackConfig = merge(baseWebpackConfig,{
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        // new webpack.LoaderOptionsPlugin({
-        //     options:{
-        //         postcss: function() {
-        //             return [px2rem({remUnit: 75})];
-        //         },
-        //     }
-        // })
     ],
     module: {
         rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
